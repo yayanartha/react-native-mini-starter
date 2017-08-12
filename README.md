@@ -4,13 +4,15 @@ This is a very minimalistic starter kit I usually used in my several projects. I
 
 Libraries used are:
 
-** Native dependencies **
-* react-native-navigation
-* react-native-vector-icons
-* realm
-* react-native-config
+### Native dependencies ###
+| Package                   | Description
+|---------------------------|--------------
+| [react-native-navigation](https://github.com/wix/react-native-navigation) | Navigator library
+| [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) | Vector Icons (FontAwesome, Ionicons, etc.)
+| [realm](https://realm.io/docs/javascript/latest/) | Row-type local database
+| [react-native-config](https://github.com/luggit/react-native-config) | Configurations (.env.staging, .env.prod, etc.) 
 
-** JS libraries **
+### JS libraries ###
 * react-native-style-tachyons
 * react-native-responsive-dimensions
 * react-native-tab-view
