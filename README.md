@@ -59,6 +59,7 @@ For detailed explanation please refer to this [article](https://medium.com/diffe
 # Running The App
 
 Once everything are configured properly, run one of these commands:
+
 | Command | Functionality |
 |---------|---------------|
 | `npm run android-staging` | To run Android app in staging environment |
@@ -69,3 +70,5 @@ Once everything are configured properly, run one of these commands:
 | `npm run build-android-prod` | To build Android APK file in production environtment |
 | `npm run release-android-staging` | To install recently released APK in staging environtment |
 | `npm run release-android-prod` | To install recently released APK in production environtment |
+
+These commands are listed at `package.json` file.
