@@ -18,10 +18,6 @@ Libraries used are:
 * react-native-tab-view
 * react-intl
 * redux
-* react-redux
-* redux-logger
-* redux-thunk
-* redux-promise
 
 # Installation
 
