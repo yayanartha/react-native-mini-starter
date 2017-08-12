@@ -13,11 +13,11 @@ Libraries used are:
 | [react-native-config](https://github.com/luggit/react-native-config) | Configurations (.env.staging, .env.prod, etc.)
 
 ### JS libraries ###
-* react-native-style-tachyons
-* react-native-responsive-dimensions
-* react-native-tab-view
-* react-intl
-* redux
+* [react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons)
+* [react-native-responsive-dimensions](https://github.com/daniakash/react-native-responsive-dimensions)
+* [react-native-tab-view](https://github.com/react-native-community/react-native-tab-view)
+* [react-intl](https://github.com/yahoo/react-intl)
+* [redux](http://redux.js.org/)
 
 # Installation
 
