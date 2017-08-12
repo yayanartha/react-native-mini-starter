@@ -13,11 +13,13 @@ Libraries used are:
 | [react-native-config](https://github.com/luggit/react-native-config) | Configurations (.env.staging, .env.prod, etc.)
 
 ### JS libraries ###
-* [react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons)
-* [react-native-responsive-dimensions](https://github.com/daniakash/react-native-responsive-dimensions)
-* [react-native-tab-view](https://github.com/react-native-community/react-native-tab-view)
-* [react-intl](https://github.com/yahoo/react-intl)
-* [redux](http://redux.js.org/)
+| Library | Description
+|---------|-------------
+| [react-native-style-tachyons](https://github.com/tachyons-css/react-native-style-tachyons) | Stylesheet
+| [react-native-responsive-dimensions](https://github.com/daniakash/react-native-responsive-dimensions) | not very necessary, but useful for making responsive `font-size` based on screen size
+| [react-native-tab-view](https://github.com/react-native-community/react-native-tab-view) | ViewPager component
+| [react-intl](https://github.com/yahoo/react-intl) | for any formatting functions
+| [redux](http://redux.js.org/) | the main architecture
 
 # Installation
 
