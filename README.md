@@ -53,7 +53,7 @@ For iOS, you just need to change BundleID with Xcode.
 
 ## 2. Fill up the .env files.
 
-Put every configurations for staging environment in .env.staging and env.prod for your production.
+Put every configurations for staging environment in `.env.staging` and `.env.prod` for your production.
 For detailed explanation please refer to this [article](https://medium.com/differential/managing-configuration-in-react-native-cd2dfb5e6f7b).
 
 # Running The App
