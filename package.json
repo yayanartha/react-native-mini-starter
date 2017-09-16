@@ -5,6 +5,8 @@
 	"scripts": {
 		"android-staging": "ENVFILE=.env.staging react-native run-android",
 		"android-prod": "ENVFILE=.env.prod react-native run-android",
+		"ios-staging": "ENVFILE=.env.staging react-native run-ios",
+		"ios-prod": "ENVFILE=.env.prod react-native run-ios",
 		"build-android-staging": "export ENVFILE=.env.staging && cd android && ./gradlew assembleRelease && cd ..",
 		"build-android-prod": "export ENVFILE=.env.prod && cd android && ./gradlew assembleRelease && cd ..",
 		"release-android-staging": "ENVFILE=.env.staging react-native run-android --variant=release",
