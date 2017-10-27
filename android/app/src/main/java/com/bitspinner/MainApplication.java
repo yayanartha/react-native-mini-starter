@@ -1,4 +1,4 @@
-package com.bitspinner;
+package com.reactnative.ministarter;
 
 import android.app.Application;
 

@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.bitspinner",
+    package = "com.reactnative.ministarter",
 )
 
 android_resource(
     name = "res",
-    package = "com.bitspinner",
+    package = "com.reactnative.ministarter",
     res = "src/main/res",
 )
 
