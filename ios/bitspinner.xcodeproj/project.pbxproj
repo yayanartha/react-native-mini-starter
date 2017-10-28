@@ -41,6 +41,10 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		632677EF2BAB4607B092A3C5 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8B8A4E0C8A549EFB5D73DFE /* Entypo.ttf */; };
 		6C55878700ED4B5AAEC7FC92 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85988FFF355F4F41AF2F27B9 /* Zocial.ttf */; };
+		7350D03C1FA404ED00136027 /* libRealmJS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7350D03B1FA404ED00136027 /* libRealmJS.a */; };
+		7350D0611FA406EF00136027 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7350D05E1FA406EF00136027 /* Roboto-Bold.ttf */; };
+		7350D0621FA406EF00136027 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7350D05F1FA406EF00136027 /* Roboto-Light.ttf */; };
+		7350D0631FA406EF00136027 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7350D0601FA406EF00136027 /* Roboto-Regular.ttf */; };
 		7E0FD3E14801429696E9F092 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8896603B8A6548878C8E8DE1 /* Ionicons.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		A24A774522944E7CA174611F /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F32D6534EE4111A7E25BAE /* libRNVectorIcons.a */; };
@@ -334,6 +338,10 @@
 		434B862EDB294C278F845451 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		7213E86570664820A6DD82FC /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
+		7350D03B1FA404ED00136027 /* libRealmJS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRealmJS.a; path = "../../../../../Library/Developer/Xcode/DerivedData/bitspinner-dnxynsqrisauggdedqfybmytoxxx/Build/Products/Debug-iphonesimulator/libRealmJS.a"; sourceTree = "<group>"; };
+		7350D05E1FA406EF00136027 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../android/app/src/main/assets/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		7350D05F1FA406EF00136027 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../android/app/src/main/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		7350D0601FA406EF00136027 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../android/app/src/main/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		85988FFF355F4F41AF2F27B9 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -362,6 +370,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7350D03C1FA404ED00136027 /* libRealmJS.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -571,6 +580,9 @@
 			isa = PBXGroup;
 			children = (
 				D8B8A4E0C8A549EFB5D73DFE /* Entypo.ttf */,
+				7350D05E1FA406EF00136027 /* Roboto-Bold.ttf */,
+				7350D05F1FA406EF00136027 /* Roboto-Light.ttf */,
+				7350D0601FA406EF00136027 /* Roboto-Regular.ttf */,
 				0773D0BFF1B04680BAB75D23 /* EvilIcons.ttf */,
 				E934B8FC83624E5CB8885918 /* FontAwesome.ttf */,
 				DA0CB71004524553B024C560 /* Foundation.ttf */,
@@ -643,6 +655,7 @@
 		DF6CFD591E684F38B536E1C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7350D03B1FA404ED00136027 /* libRealmJS.a */,
 				D2E0CFE7060243FD863D3621 /* libc++.tbd */,
 				36C4E741179A4033AA98E5B5 /* libz.tbd */,
 			);
@@ -1078,8 +1091,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				7350D0611FA406EF00136027 /* Roboto-Bold.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				632677EF2BAB4607B092A3C5 /* Entypo.ttf in Resources */,
+				7350D0621FA406EF00136027 /* Roboto-Light.ttf in Resources */,
 				12E2725F51E94C898283B0F7 /* EvilIcons.ttf in Resources */,
 				F1852FBAE91F49DCB8F4C5F7 /* FontAwesome.ttf in Resources */,
 				B257CAC4A97D420E887D1A05 /* Foundation.ttf in Resources */,
@@ -1087,6 +1102,7 @@
 				A94B8A4F91C94719B45F1F5D /* MaterialCommunityIcons.ttf in Resources */,
 				29B07BE44D7440D3BA753D57 /* MaterialIcons.ttf in Resources */,
 				4AE2E18F405248C59A3EC40A /* Octicons.ttf in Resources */,
+				7350D0631FA406EF00136027 /* Roboto-Regular.ttf in Resources */,
 				DBF9486D3D9248BC8C67AE36 /* SimpleLineIcons.ttf in Resources */,
 				6C55878700ED4B5AAEC7FC92 /* Zocial.ttf in Resources */,
 			);
@@ -1280,6 +1296,7 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 				);
 				INFOPLIST_FILE = bitspinner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1304,6 +1321,7 @@
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/realm/src/**",
+					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
 				);
 				INFOPLIST_FILE = bitspinner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
