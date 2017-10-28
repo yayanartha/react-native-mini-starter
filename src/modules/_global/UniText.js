@@ -1,16 +1,22 @@
 import React from 'react';
 import { Text } from 'react-native';
 import PropTypes from 'prop-types';
-import { styles as s } from 'react-native-style-tachyons';
-import { responsiveFontSize as rf } from 'react-native-responsive-dimensions';
+import { ms } from '../../utils';
 
 const BaseTemplate = (props) => {
     return (
         <Text numberOfLines={props.numberOfLines}
             style={{
-                fontSize: props.size, color: props.color,
+                fontSize: props.size,
+                color: props.color,
                 backgroundColor: 'transparent',
                 fontFamily: props.family,
+                textDecorationLine: props.underline === true ? 'underline' : 'none',
+                fontStyle: props.italic === true ? 'italic' : 'normal',
+                textAlign: props.textAlign,
+                lineHeight: typeof props.lineHeight !== 'undefined'
+                    ? props.lineHeight
+                    : Math.round(props.size) + 4,
             }}
         >
             {props.children}
@@ -18,60 +24,44 @@ const BaseTemplate = (props) => {
     );
 };
 BaseTemplate.propTypes = {
-    color: PropTypes.string.isRequired,
-    numberOfLines: PropTypes.number.isRequired,
-    size: PropTypes.number.isRequired,
-    family: PropTypes.string.isRequired,
+    children: PropTypes.any.isRequired,
+    color: PropTypes.string,
+    numberOfLines: PropTypes.number,
+    size: PropTypes.number,
+    family: PropTypes.string,
+    lineHeight: PropTypes.number,
+    underline: PropTypes.bool,
+    italic: PropTypes.bool,
+    textAlign: PropTypes.string,
 };
 BaseTemplate.defaultProps = {
     color: '#000',
     numberOfLines: 0,
-    size: rf(2),
-    family: 'Roboto-Regular',
+    size: ms(14),
+    family: 'LibreFranklin-Regular',
+    textAlign: 'left',
 };
 
-export const H1 = (props) => {
+export const Bold = (props) => {
     return (
-        <BaseTemplate size={rf(2.5)} {...props}
-            family={!!props.noBold ? 'Roboto-Regular' : 'Roboto-Bold'}
-        />
-    );
-};
-
-export const H2 = (props) => {
-    return (
-        <BaseTemplate size={rf(2)} {...props}
+        <BaseTemplate {...props}
             family="Roboto-Bold"
         />
     );
 };
 
-export const H3 = (props) => {
+export const Regular = (props) => {
     return (
-        <BaseTemplate size={rf(2)} {...props} />
-    );
-};
-
-export const H4 = (props) => {
-    return (
-        <BaseTemplate size={rf(1.7)} {...props}
-            family="Helvetica"
+        <BaseTemplate {...props}
+            family="Roboto-Regular"
         />
     );
 };
 
-export const FatM = (props) => {
+export const Light = (props) => {
     return (
-        <BaseTemplate size={rf(1.7)} {...props}
-            family="Roboto-Bold"
+        <BaseTemplate {...props}
+            family="Roboto-Light"
         />
     );
-}
-
-export const FatS = (props) => {
-    return (
-        <BaseTemplate size={rf(1.5)} {...props}
-            family="Roboto-Bold"
-        />
-    );
-}
+};

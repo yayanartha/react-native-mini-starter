@@ -26,9 +26,6 @@ export default () => {
             roboto: 'Roboto-Regular',
             roboto_light: 'Roboto-Light',
             roboto_bold: 'Roboto-Bold',
-            helvetica: 'Helvetica',
-            helvetica_light: 'Helvetica-Light',
-            helvetica_bold: 'Helvetica-Bold',
         },
     }, StyleSheet);
 };

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, TouchableNativeFeedback, TouchableHighlight, Platform } from 'react-native';
 
@@ -47,6 +47,7 @@ const UniButton = (props) => {
 }
 
 UniButton.propTypes = {
+    children: PropTypes.any.isRequired,
     action: PropTypes.func.isRequired,
     params: PropTypes.any,
     disabled: PropTypes.bool,

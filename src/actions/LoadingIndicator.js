@@ -1,12 +1,12 @@
 export const show = (navigator, text = undefined) => {
     navigator.showLightBox({
-        screen: "sejasa.LoadingLightBox",
+        screen: 'ministarter.LoadingLightBox',
         passProps: { text },
         style: {
-            backgroundBlur: "dark",
+            backgroundBlur: 'dark',
             backgroundColor: 'rgba(0,0,0,0.5)',
             tapBackgroundToDismiss: false,
-        }
+        },
     });
 };
 

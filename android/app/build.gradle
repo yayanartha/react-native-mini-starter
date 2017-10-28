@@ -146,6 +146,8 @@ dependencies {
     compile project(':react-native-vector-icons')
     compile project(':react-native-config')
     compile project(':realm')
+    compile project(':react-native-image-picker') // image-picker
+    
 }
 
 // Run this once to be able to run the application with BUCK

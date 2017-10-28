@@ -13,10 +13,17 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"prop-types": "^15.6.0",
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.47.1",
+		"react-native-animatable": "^1.2.4",
 		"react-native-config": "^0.6.0",
-		"react-native-navigation": "^1.1.193",
+		"react-native-image-picker": "^0.26.7",
+		"react-native-image-resizer": "^1.0.0",
+		"react-native-interactable": "^0.1.6",
+		"react-native-linear-gradient": "^2.3.0",
+		"react-native-navigation": "^1.1.253",
+		"react-native-photo-view": "^1.5.2",
 		"react-native-responsive-dimensions": "^1.0.1",
 		"react-native-style-tachyons": "^3.4.2",
 		"react-native-tab-view": "^0.0.69",
@@ -29,8 +36,16 @@
 		"redux-thunk": "^2.2.0"
 	},
 	"devDependencies": {
+		"babel-eslint": "^8.0.1",
 		"babel-jest": "20.0.3",
 		"babel-preset-react-native": "2.1.0",
+		"eslint": "^4.9.0",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-plugin-import": "^2.8.0",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"eslint-plugin-react": "^7.4.0",
+		"eslint-plugin-react-native": "^3.1.0",
 		"jest": "20.0.4",
 		"react-test-renderer": "16.0.0-alpha.12"
 	},

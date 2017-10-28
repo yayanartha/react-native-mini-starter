@@ -1,27 +1,24 @@
 import React, { PureComponent } from 'react';
-import { View, Text, FlatList, ScrollView, TouchableOpacity } from 'react-native';
-import PropTypes from 'prop-types';
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { styles as s } from 'react-native-style-tachyons';
 import IonIcon from 'react-native-vector-icons/Ionicons';
 import { responsiveFontSize as rf } from 'react-native-responsive-dimensions';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { logout } from '../../actions/action.account';
-import { Navbar, UniText, UniButton, BottomButtonBar } from './index';
 import { colors } from '../../constants';
 
 const DrawerMenu = (props) => {
     return (
-        <UniButton action={props.action}>
-            <View style={[s.flx_row, s.jcc, { paddingHorizontal: 12, height: 45 }]}>
-                <View style={[s.aic, s.jcc, { width: 30 }]}>
-                    <IonIcon name={props.iconName} size={24} color={colors.RED} />
+        <TouchableOpacity onPress={props.action} activeOpacity={0.8}>
+            <View style={[s.flx_row, s.jcc, { paddingHorizontal: 16, height: 45 }]}>
+                <View style={[s.aic, s.jcc, { width: 45 }]}>
+                    <IonIcon name={props.iconName} size={24} color={colors.TEAL}/>
                 </View>
-                <View style={[s.flx_i, s.jcc, { paddingHorizontal: 12 }]}>
-                    <UniText.H3>{props.label}</UniText.H3>
+                <View style={[s.flx_i, s.jcc, { paddingHorizontal: 16 }]}>
+                    <Text style={[s.ff_roboto, s.black]}>
+                        {props.label}
+                    </Text>
                 </View>
             </View>
-        </UniButton>
+        </TouchableOpacity>
     );
 };
 
@@ -38,10 +35,6 @@ class Drawer extends PureComponent {
         this._gotoWallet = this._gotoWallet.bind(this);
         this._gotoAdvertise = this._gotoAdvertise.bind(this);
         this._gotoTransaction = this._gotoTransaction.bind(this);
-
-        this._gotoBusinessProfile = this._gotoBusinessProfile.bind(this);
-        this._handleLogout = this._handleLogout.bind(this);
-
         this.state = {
 
         };
@@ -55,30 +48,48 @@ class Drawer extends PureComponent {
     }
     _gotoProfile() {
         this._toggleDrawer();
-
+        this.props.navigator.push({
+            screen: 'callind.Profile',
+            overrideBackPress: true,
+        });
     }
     _gotoInvite() {
         this._toggleDrawer();
-
+        this.props.navigator.push({
+            screen: 'callind.InviteFriends',
+            overrideBackPress: true,
+        });
     }
     _gotoBroadcast() {
         this._toggleDrawer();
-
+        this.props.navigator.push({
+            screen: 'callind.Broadcast',
+            overrideBackPress: true,
+        });
     }
     _gotoPrivateChat() {
         this._toggleDrawer();
     }
     _gotoCurhatChat() {
         this._toggleDrawer();
-
+        this.props.navigator.push({
+            screen: 'callind.CurhatChat',
+            overrideBackPress: true,
+        });
     }
     _gotoFindUser() {
         this._toggleDrawer();
-
+        this.props.navigator.push({
+            screen: 'callind.FindUser',
+            overrideBackPress: true,
+        });
     }
     _gotoWallet() {
         this._toggleDrawer();
-
+        this.props.navigator.push({
+            screen: 'callind.Wallet',
+            overrideBackPress: true,
+        });
     }
     _gotoAdvertise() {
         this._toggleDrawer();
@@ -86,126 +97,80 @@ class Drawer extends PureComponent {
     }
     _gotoTransaction() {
         this._toggleDrawer();
-
-    }
-    _gotoDashboard() {
-        this._toggleDrawer();
-        this.props.navigator.resetTo({
-            screen: 'sejasa.Dashboard',
-            animated: false,
+        this.props.navigator.push({
+            screen: 'callind.Transaction',
+            overrideBackPress: true,
         });
-    }
-    _gotoBusinessProfile() {
-        this._toggleDrawer();
-        this.props.navigator.resetTo({
-            screen: 'sejasa.BusinessProfile',
-            animated: false,
-        });
-    }
-    _handleLogout() {
-        this._toggleDrawer();
-        this.props.logout(this.props.navigator);
     }
     render() {
         return (
             <View style={[s.flx_i, s.bg_white]}>
-
-                <View style={[s.bg_teal, s.jcc, { height: 160, padding: 16 }]}>
-                    <View style={[s.aic, s.jcc, s.bg_grey_soft, {
-                        width: 65, height: 65, borderRadius: 65,
-                    }]}>
-
-                    </View>
-                    <View style={{ paddingTop: 12 }}>
-                        <UniText.H3 color="#fff">Nama User</UniText.H3>
-                        <UniText.H3 color="#fff">email@user.com</UniText.H3>
-                    </View>
-                </View>
-
                 <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={[s.bg_red, s.flx_row, s.aic, { height: 150 }]}>
+                        <View style={{ paddingLeft: 16 }}>
+                            <View style={[s.aic, s.jcc, s.bg_grey_soft, {
+                                width: 80, height: 80, borderRadius: 80,
+                            }]}>
+                            </View>
+                        </View>
+                        <View style={[s.flx_i, { paddingHorizontal: 16 }]}>
+                            <TouchableOpacity onPress={this._gotoProfile} activeOpacity={0.8}>
+                                <View>
+                                    <Text style={[s.white, s.ff_roboto, { fontSize: rf(2.3), marginBottom: 8 }]}>
+                                        Nama user
+                                    </Text>
+                                    <Text style={[s.white, s.ff_roboto]}>
+                                        email@user.com
+                                    </Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+
                     <View style={{ height: 8 }}/>
 
-                    <DrawerMenu label="Points Summary"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Invites" iconName="ios-person-add-outline"
                         action={this._gotoInvite}
                     />
 
-                    <DrawerMenu label="Beli Point"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Broadcast Chat" iconName="ios-radio-outline"
                         action={this._gotoBroadcast}
                     />
 
-                    <DrawerMenu label="Pro Dashboard"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Private Chat" iconName="ios-lock-outline"
                         action={this._gotoPrivateChat}
                     />
 
-                    <View style={{ paddingTop: 16, paddingHorizontal: 16, paddingBottom: 8 }}>
-                        <UniText.FatM color="#999">
-                            Profil Usaha Saya
-                        </UniText.FatM>
-                    </View>
-                    <DrawerMenu label="Contoh Profil Usaha"
-                        iconName="ios-square-outline"
-                        action={this._gotoBusinessProfile}
-                    />
-                    <DrawerMenu label="Buat profil usaha baru"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Curhat Chat" iconName="ios-chatbubbles-outline"
                         action={this._gotoCurhatChat}
                     />
-                    <View style={{ height: 1, backgroundColor: '#eee' }}/>
 
-                    <DrawerMenu label="Pengaturan"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Find User" iconName="ios-globe-outline"
                         action={this._gotoFindUser}
                     />
 
-                    <DrawerMenu label="Hubungi Kami (Live Chat)"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Wallet" iconName="ios-cash-outline"
                         action={this._gotoWallet}
                     />
 
-                    <DrawerMenu label="Bantuan"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Advertise" iconName="ios-megaphone-outline"
                         action={this._gotoAdvertise}
                     />
 
-                    <DrawerMenu label="Tutorial Sejasa Pay"
-                        iconName="ios-square-outline"
+                    <DrawerMenu label="Transaction" iconName="ios-swap-outline"
                         action={this._gotoTransaction}
                     />
 
-                    <DrawerMenu label="Tutorial Progress Payment"
-                        iconName="ios-square-outline"
-                        action={this._gotoTransaction}
-                    />
+                    <View style={[s.jcc, { height: 40, marginTop: 12, paddingHorizontal: 16 }]}>
+                        <Text style={[s.grey9, s.ff_roboto, { fontSize: rf(1.7) }]}>
+                            Callind App v-0.1
+                        </Text>
+                    </View>
 
-                    <DrawerMenu label="Keluar"
-                        iconName="md-close"
-                        action={this._handleLogout}
-                    />
-
-                    <View style={{ height: 8 }}/>
                 </ScrollView>
             </View>
         );
     }
 }
 
-Drawer.propTypes = {
-    logout: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-
-});
-
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({
-        logout,
-    }, dispatch);
-};
-
-export default connect(
-    mapStateToProps, mapDispatchToProps
-)(Drawer);
+export default Drawer;
